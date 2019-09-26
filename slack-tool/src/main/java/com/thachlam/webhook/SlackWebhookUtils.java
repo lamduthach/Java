@@ -1,6 +1,6 @@
 package com.thachlam.webhook;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import java.io.IOException;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.http.client.methods.HttpPost;
@@ -21,8 +21,7 @@ public class SlackWebhookUtils {
         HttpPost httpPost = new HttpPost(SLACK_WEBHOOK_URL);
 
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            String json = objectMapper.writeValueAsString(message);
+            String json = new Gson().toJson(message);
 
             StringEntity entity = new StringEntity(json);
             httpPost.setEntity(entity);
