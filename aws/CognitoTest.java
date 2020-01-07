@@ -1,3 +1,13 @@
+///////////////////////// pom.xml /////////////////////////////
+<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-cognitoidp -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-cognitoidp</artifactId>
+            <version>1.11.690</version>
+        </dependency>
+
+
+////////////////////////// java code //////////////////////////
 public class CognitoTest {
 
     String clientId = "my-client-id";
